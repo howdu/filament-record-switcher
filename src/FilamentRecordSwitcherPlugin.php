@@ -4,7 +4,6 @@ namespace Howdu\FilamentRecordSwitcher;
 
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use Filament\Resources\Pages\EditRecord;
 use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;

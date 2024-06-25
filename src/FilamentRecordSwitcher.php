@@ -2,6 +2,4 @@
 
 namespace Howdu\FilamentRecordSwitcher;
 
-class FilamentRecordSwitcher
-{
-}
+class FilamentRecordSwitcher {}
