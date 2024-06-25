@@ -9,6 +9,8 @@ Subtly convert the page title into a dropdown navigation that's displayed on cli
 
 It works similar to Filament's global search but only show results for the current resource.
 
+![preview](https://github.com/howdu/filament-record-switcher/assets/533658/f0c62589-bd5f-4463-bf93-124b1c37955b)
+
 ## Installation
 
 You can install the package via composer:
