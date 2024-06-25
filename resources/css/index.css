@@ -1,0 +1,28 @@
+.filament-record-switcher .choices.choices__select__changer {
+    position: static;
+    font-size: theme('fontSize.base');
+    font-weight: theme('fontWeight.normal');
+    line-height: theme('lineHeight.normal');
+    letter-spacing: theme('letterSpacing.normal');
+    @apply text-gray-950 dark:text-white;
+
+    > .choices__inner {
+        @apply inline-block py-0 pl-0;
+        > .choices__list > .choices__item {
+            @apply text-2xl font-bold tracking-tight text-gray-950 dark:text-white sm:text-3xl;
+            @apply text-gray-950 dark:text-white !important;
+        }
+    }
+    > .choices__list--dropdown {
+        left: 0;
+    }
+    @screen lg {
+        > .choices__list--dropdown {
+            @apply w-auto !important;
+            > .choices__input {
+                @apply w-auto !important;
+                max-width: 90vw;
+            }
+        }
+    }
+}
