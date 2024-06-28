@@ -5,9 +5,9 @@
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/howdu/filament-record-switcher/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/howdu/filament-record-switcher/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/howdu/filament-record-switcher.svg?style=flat-square)](https://packagist.org/packages/howdu/filament-record-switcher)
 
-Subtly convert the page title into a dropdown navigation that's displayed on click.  
+Subtly convert the page title into a dropdown navigation that's displayed on click. 
 
-It works similar to Filament's global search but only show results for the current resource.
+It works similar to Filament's global search but only shows results for the current resource.
 
 ![preview](https://github.com/howdu/filament-record-switcher/assets/533658/f0c62589-bd5f-4463-bf93-124b1c37955b)
 
@@ -45,7 +45,7 @@ class AdminPanelProvider extends PanelProvider
 }
 ```
 2. Add the `HasRecordSwitcher` trait to each of your edit record Page.
-E.g `app/Filament/Resources/Category/EditCategory.php`
+E.g `app/Filament/Resources/Category/Pages/EditCategory.php`
 ```php
 use Howdu\FilamentRecordSwitcher\Filament\Concerns\HasRecordSwitcher;
 
@@ -54,6 +54,10 @@ class EditCategory extends EditRecord
     use HasRecordSwitcher;
 }
 ```
+
+Note: this trail will overwrite the `getHeading()` method if you've overwritten it in your Page you need to 
+overwrite `getRecordTitle()` instead.
+
 3. Publish plugin assets.
 ```bash
 php artisan filament:assets

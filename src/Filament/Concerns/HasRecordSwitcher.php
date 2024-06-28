@@ -91,7 +91,7 @@ trait HasRecordSwitcher
 
             $query->when(
                 str($searchAttribute)->contains('.')
-                     && ! str($searchAttribute)->contains('`'),
+                && ! str($searchAttribute)->contains('`'),
                 function (Builder $query) use ($databaseConnection, $isForcedCaseInsensitive, $searchAttribute, $search, $whereClause): Builder {
                     return $query->{"{$whereClause}Relation"}(
                         (string) str($searchAttribute)->beforeLast('.'),
@@ -113,17 +113,10 @@ trait HasRecordSwitcher
         return $query;
     }
 
-    public function updateRecordSwitcher($value)
-    {
-        $url = self::getResource()::getUrl('edit', ['record' => $value]);
-
-        $this->redirect($url);
-    }
-
     protected function recordSwitcherItem(Model $model): array
     {
         $item = [
-            'value' => $model->getKey(),
+            'value' => self::getResource()::getUrl('edit', ['record' => $model->getRouteKey()]),
             'label' => $this->recordSwitcherItemLabel($model),
         ];
 
