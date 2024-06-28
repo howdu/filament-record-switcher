@@ -19,7 +19,7 @@
         searchPrompt: '{{ __('filament-forms::components.select.search_prompt') }}',
         searchingMessage: '{{ __('filament-forms::components.select.searching_message') }}',
         state: @js($value),
-        updateSelected: async (value) => await $wire.updateRecordSwitcher(value),
+        updateSelected: (value) => window.location.href = value,
     })"
     wire:ignore
     x-on:keydown.esc="select.dropdown.isActive && $event.stopPropagation()"
