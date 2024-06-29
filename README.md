@@ -1,15 +1,14 @@
-# Resource search dropdown navigation for Filament
+# Resource title navigation dropdown with search for Filament
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/howdu/filament-record-switcher.svg?style=flat-square)](https://packagist.org/packages/howdu/filament-record-switcher)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/howdu/filament-record-switcher/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/howdu/filament-record-switcher/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/howdu/filament-record-switcher/fix-php-code-styling.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/howdu/filament-record-switcher/actions?query=workflow%3A"Fix+PHP+code+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/howdu/filament-record-switcher.svg?style=flat-square)](https://packagist.org/packages/howdu/filament-record-switcher)
+
+![Screenshot](https://github.com/howdu/filament-record-switcher/assets/533658/f0c62589-bd5f-4463-bf93-124b1c37955b)
 
 Subtly convert the page title into a dropdown navigation that's displayed on click. 
 
 It works similar to Filament's global search but only shows results for the current resource.
-
-![preview](https://github.com/howdu/filament-record-switcher/assets/533658/f0c62589-bd5f-4463-bf93-124b1c37955b)
 
 ## Installation
 
