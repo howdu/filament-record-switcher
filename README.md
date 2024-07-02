@@ -57,7 +57,12 @@ class EditCategory extends EditRecord
 Note: this trail will overwrite the `getHeading()` method if you've overwritten it in your Page you need to 
 overwrite `getRecordTitle()` instead.
 
-3. Publish plugin assets.
+3. Check your Resource class e.g CategoryResource has the record title attribute set which's used as the label in the select dropdown.
+```php
+protected static ?string $recordTitleAttribute = 'title';
+```
+
+4. Finally publish plugin assets.
 ```bash
 php artisan filament:assets
 ```
