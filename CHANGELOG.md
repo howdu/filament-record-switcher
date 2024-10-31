@@ -2,6 +2,14 @@
 
 All notable changes to `filament-record-switcher` will be documented in this file.
 
+## v1.0.3 - 2024-10-31
+
+### What's Changed
+
+* Add record switcher title by @howdu in https://github.com/howdu/filament-record-switcher/pull/6
+
+**Full Changelog**: https://github.com/howdu/filament-record-switcher/compare/v1.0.2...v1.0.3
+
 ## v1.0.2 - 2024-08-14
 
 ### What's Changed
