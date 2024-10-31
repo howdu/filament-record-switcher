@@ -27,9 +27,14 @@ trait HasRecordSwitcher
 
         return new HtmlString(Blade::render('filament-record-switcher::components.record-switcher', [
             'value' => $this->getRecord()->getKey(),
-            'label' => $this->getRecordTitle(),
+            'label' => $this->getRecordSwitcherTitle(),
             'limit_results' => $this->maxSelectOptions,
         ]));
+    }
+
+    public function getRecordSwitcherTitle(): string | Htmlable
+    {
+        return $this->getRecordTitle();
     }
 
     /**
