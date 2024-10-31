@@ -50,7 +50,7 @@ class FilamentRecordSwitcherServiceProvider extends PackageServiceProvider
     public function packageBooted(): void
     {
         // Testing
-        Testable::mixin(new TestsFilamentRecordSwitcher());
+        Testable::mixin(new TestsFilamentRecordSwitcher);
     }
 
     protected function getAssetPackageName(): ?string
