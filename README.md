@@ -57,6 +57,21 @@ class EditCategory extends EditRecord
 Note: this trail will overwrite the `getHeading()` method if you've overwritten it in your Page you need to 
 overwrite `getRecordTitle()` instead.
 
+If you want to add custom logic to the `afterSave()` method, you can do so by using the `recordSwitcherAfterSave()` method from the trait.
+```php
+ use HasRecordSwitcher {
+    afterSave as recordSwitcherAfterSave;
+}
+
+protected function afterSave(): void
+{
+    /// Custom logic
+
+    $this->recordSwitcherAfterSave();
+}
+````
+
+
 3. Check your Resource class e.g CategoryResource has the record title attribute set which's used as the label in the select dropdown.
 ```php
 protected static ?string $recordTitleAttribute = 'title';

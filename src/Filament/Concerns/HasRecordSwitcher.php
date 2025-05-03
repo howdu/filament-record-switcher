@@ -3,6 +3,7 @@
 namespace Howdu\FilamentRecordSwitcher\Filament\Concerns;
 
 use Filament\Facades\Filament;
+use Filament\Resources\Pages\EditRecord;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Connection;
 use Illuminate\Database\Eloquent\Builder;
@@ -15,9 +16,19 @@ use Livewire\Attributes\Renderless;
 use function Filament\Support\generate_search_column_expression;
 use function Filament\Support\generate_search_term_expression;
 
+/**
+ * @mixin EditRecord
+ */
 trait HasRecordSwitcher
 {
     protected int $maxSelectOptions = 10;
+
+    protected function afterSave(): void
+    {
+        if ($this->isFilamentRecordSwitcherPluginInstalled()) {
+            $this->dispatch('record-switcher:refresh', label: $this->getRecordSwitcherTitle());
+        }
+    }
 
     public function getHeading(): string | Htmlable
     {
