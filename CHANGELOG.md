@@ -2,6 +2,19 @@
 
 All notable changes to `filament-record-switcher` will be documented in this file.
 
+## v1.1.0 - 2025-05-03
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot in https://github.com/howdu/filament-record-switcher/pull/8
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot in https://github.com/howdu/filament-record-switcher/pull/9
+* Bump esbuild from 0.19.12 to 0.25.0 by @dependabot in https://github.com/howdu/filament-record-switcher/pull/10
+* Refresh selected label after save by @howdu in https://github.com/howdu/filament-record-switcher/pull/11
+  **This now uses the afterSave hook.**
+  Make sure to call the method from within the trait. An example has been added to the documentation.
+
+**Full Changelog**: https://github.com/howdu/filament-record-switcher/compare/v1.0.3...v1.1.0
+
 ## v1.0.3 - 2024-10-31
 
 ### What's Changed
