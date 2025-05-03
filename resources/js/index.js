@@ -108,6 +108,17 @@ export default function selectChangerComponent({
                     this.isSearching = false
                 }, 250),
             )
+
+            this.$wire.on('record-switcher:refresh', (details) => {
+                this.select.clearChoices()
+                this.select.setChoices([
+                    {
+                        label: details.label,
+                        value: state,
+                        selected: true,
+                    },
+                ])
+            });
         },
 
         refreshChoices: async function (config = {}) {
