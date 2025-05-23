@@ -160,7 +160,7 @@ trait HasRecordSwitcher
     protected function getRecordSwitcherQuery(): Builder
     {
         /** @var Builder $query */
-        $query = $this->getModel()::query();
+        $query = self::getResource()::getEloquentQuery();
 
         return $query->limit($this->maxSelectOptions);
     }
