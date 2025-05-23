@@ -2,6 +2,15 @@
 
 All notable changes to `filament-record-switcher` will be documented in this file.
 
+## v1.1.1 - 2025-05-23
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot in https://github.com/howdu/filament-record-switcher/pull/12
+* Fix get eloquent query from resource class.
+
+**Full Changelog**: https://github.com/howdu/filament-record-switcher/compare/v1.1.0...v1.1.1
+
 ## v1.1.0 - 2025-05-03
 
 ### What's Changed
