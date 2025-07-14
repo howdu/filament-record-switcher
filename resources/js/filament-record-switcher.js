@@ -1,5 +1,3 @@
-import Choices from 'choices.js'
-
 export default function selectChangerComponent({
    getResultsUsing,
    hasDynamicSearchResults,

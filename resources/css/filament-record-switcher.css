@@ -1,16 +1,18 @@
+@reference "tailwindcss";
+@reference "../../vendor/filament/filament/resources/css/index.css";
+
 .filament-record-switcher .choices.choices__select__changer {
     position: static;
-    font-size: theme('fontSize.base');
-    font-weight: theme('fontWeight.normal');
-    line-height: theme('lineHeight.normal');
-    letter-spacing: theme('letterSpacing.normal');
+    font-size: var(--text-base);
+    font-weight: var(--font-normal);
+    line-height: var(--leading-normal);
     @apply text-gray-950 dark:text-white;
 
     > .choices__inner {
         @apply inline-block py-0 pl-0;
         > .choices__list > .choices__item {
             @apply text-2xl font-bold tracking-tight text-gray-950 dark:text-white sm:text-3xl;
-            @apply text-gray-950 dark:text-white !important;
+            color: var(--gray-950);
         }
     }
     > .choices__list--dropdown {
@@ -18,9 +20,9 @@
     }
     @screen lg {
         > .choices__list--dropdown {
-            @apply w-auto !important;
+            width: auto !important;
             > .choices__input {
-                @apply w-auto !important;
+                width: auto !important;
                 max-width: 90vw;
             }
         }
