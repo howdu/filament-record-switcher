@@ -1,0 +1,61 @@
+@reference "tailwindcss";
+@reference "../../vendor/filament/filament/resources/css/index.css";
+
+@import "choices.js/public/assets/styles/choices.css";
+
+.filament-record-switcher .choices.choices__select__changer {
+    font-weight: var(--font-weight-normal);
+    line-height: var(--leading-normal);
+    @apply text-gray-950 dark:text-white;
+
+    .choices__inner {
+        min-height: 0;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        font-size: var(--text-2xl);
+        line-height: var(--tw-leading, var(--text-2xl--line-height));
+        font-weight: var(--font-weight-bold);
+        letter-spacing: var(--tracking-tight);
+        color: var(--gray-950);
+    }
+
+    .choices__list--dropdown .choices__select__changer__item {
+        font-size: var(--text-sm);
+        font-weight: var(--font-weight-normal);
+        line-height: var(--leading-normal);
+        @apply text-gray-900 dark:text-white;
+    }
+
+    .choices__list--single {
+        padding: 0 32px 0 0;
+        margin: 0;
+    }
+
+    .choices__input {
+        border-radius: 0;
+        padding: 0.5rem 0.75rem;
+        font-size: var(--text-sm);
+        font-weight: var(--font-weight-normal);
+        line-height: var(--leading-normal);
+    }
+
+    .choices__list--dropdown,
+    .choices__list[aria-expanded] {
+        word-break: break-word;
+        width: max-content;
+        padding: 0;
+        min-width: 12rem;
+        z-index: 50;
+        border-radius: 0.5rem;
+        margin-top: 0.25rem;
+    }
+
+    @media (min-width: 40rem) {
+        .choices__inner .choices__select__changer__item {
+            font-size: var(--text-3xl);
+            line-height: var(--tw-leading, var(--text-3xl--line-height));
+        }
+    }
+}
+
