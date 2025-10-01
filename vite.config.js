@@ -7,8 +7,8 @@ export default defineConfig(async () => {
         plugins: [
             laravel({
                 input: [
-                    'resources/js/filament-record-switcher.js',
-                    'resources/css/filament-record-switcher.css',
+                    'resources/js/record-switcher.js',
+                    'resources/css/record-switcher.css',
                 ],
                 publicDirectory: 'dist',
                 refresh: false,
@@ -17,6 +17,7 @@ export default defineConfig(async () => {
         ],
         server: {
             open: false,
+            hmr: false,
         },
         build: {
             manifest: false,
@@ -31,7 +32,7 @@ export default defineConfig(async () => {
                 },
                 treeshake: {
                     moduleSideEffects: (id) => {
-                        return id.includes('filament-record-switcher.js')
+                        return id.includes('record-switcher.js')
                     },
                 },
             },

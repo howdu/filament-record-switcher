@@ -20,10 +20,10 @@ class FilamentRecordSwitcherPlugin implements Plugin
         FilamentAsset::register([
             AlpineComponent::make(
                 'record-switcher',
-                __DIR__ . '/../resources/dist/filament-record-switcher.js'
+                __DIR__ . '/../resources/dist/record-switcher.js'
             )
                 ->loadedOnRequest(),
-            Css::make('record-switcher', __DIR__ . '/../resources/dist/filament-record-switcher.css')
+            Css::make('record-switcher', __DIR__ . '/../resources/dist/record-switcher.css')
                 ->loadedOnRequest(),
         ], package: 'howdu/filament-record-switcher');
     }

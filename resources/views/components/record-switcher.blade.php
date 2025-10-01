@@ -4,8 +4,8 @@
     'record-switcher',
     package: 'howdu/filament-record-switcher'
     ))]"
-    ax-load
-    ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc(
+    x-load
+    x-load-src="{{ \Filament\Support\Facades\FilamentAsset::getAlpineComponentSrc(
         'record-switcher',
         'howdu/filament-record-switcher'
     ) }}"
@@ -23,7 +23,7 @@
     })"
     wire:ignore
     x-on:keydown.esc="select.dropdown.isActive && $event.stopPropagation()"
-    class="filament-record-switcher relative flex items-center gap-2 cursor-pointer"
+    class="filament-record-switcher"
 >
     @if (! empty($icon))
         <x-dynamic-component
