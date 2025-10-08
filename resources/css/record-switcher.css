@@ -9,6 +9,8 @@
     @apply text-gray-950 dark:text-white;
 
     .choices__inner {
+        @apply text-gray-950 dark:text-white;
+        background-color: transparent;
         min-height: 0;
         border: none;
         border-radius: 0;
@@ -17,7 +19,6 @@
         line-height: var(--tw-leading, var(--text-2xl--line-height));
         font-weight: var(--font-weight-bold);
         letter-spacing: var(--tracking-tight);
-        color: var(--gray-950);
     }
 
     .choices__list--dropdown .choices__select__changer__item {
