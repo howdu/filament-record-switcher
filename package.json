@@ -16,6 +16,6 @@
         "prettier": "^2.7.1",
         "prettier-plugin-tailwindcss": "^0.1.13",
         "tailwindcss": "^4.1.11",
-        "vite": "^6.2.1"
+        "vite": "^6.4.1"
     }
 }
