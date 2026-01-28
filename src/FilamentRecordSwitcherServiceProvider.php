@@ -2,9 +2,6 @@
 
 namespace Howdu\FilamentRecordSwitcher;
 
-use Howdu\FilamentRecordSwitcher\Commands\FilamentRecordSwitcherCommand;
-use Howdu\FilamentRecordSwitcher\Testing\TestsFilamentRecordSwitcher;
-use Livewire\Features\SupportTesting\Testable;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

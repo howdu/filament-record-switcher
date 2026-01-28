@@ -2,9 +2,9 @@
 
 namespace Howdu\FilamentRecordSwitcher\Tests\Database\Factories;
 
+use Howdu\FilamentRecordSwitcher\Tests\Fixtures\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Howdu\FilamentRecordSwitcher\Tests\Fixtures\Models\Post;
 
 class PostFactory extends Factory
 {
