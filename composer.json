@@ -80,10 +80,7 @@
         "laravel": {
             "providers": [
                 "Howdu\\FilamentRecordSwitcher\\FilamentRecordSwitcherServiceProvider"
-            ],
-            "aliases": {
-                "FilamentRecordSwitcher": "Howdu\\FilamentRecordSwitcher\\Facades\\FilamentRecordSwitcher"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
