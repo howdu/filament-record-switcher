@@ -9,29 +9,27 @@ use Filament\FilamentServiceProvider;
 use Filament\Forms\FormsServiceProvider;
 use Filament\Infolists\InfolistsServiceProvider;
 use Filament\Notifications\NotificationsServiceProvider;
+use Filament\Schemas\SchemasServiceProvider;
 use Filament\Support\SupportServiceProvider;
 use Filament\Tables\TablesServiceProvider;
 use Filament\Widgets\WidgetsServiceProvider;
 use Howdu\FilamentRecordSwitcher\FilamentRecordSwitcherServiceProvider;
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Howdu\FilamentRecordSwitcher\Tests\Fixtures\Filament\TestPanelProvider;
+use Illuminate\Foundation\Auth\User;
 use Livewire\LivewireServiceProvider;
+use Orchestra\Testbench\Attributes\WithMigration;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
+use Sinnbeck\DomAssertions\DomAssertionsServiceProvider;
+use function Pest\Laravel\actingAs;
 
+#[WithMigration]
 class TestCase extends Orchestra
 {
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Howdu\\FilamentRecordSwitcher\\Database\\Factories\\' . class_basename($modelName) . 'Factory'
-        );
-    }
-
     protected function getPackageProviders($app)
     {
         return [
+            DomAssertionsServiceProvider::class,
             ActionsServiceProvider::class,
             BladeCaptureDirectiveServiceProvider::class,
             BladeHeroiconsServiceProvider::class,
@@ -39,22 +37,29 @@ class TestCase extends Orchestra
             FilamentServiceProvider::class,
             FormsServiceProvider::class,
             InfolistsServiceProvider::class,
-            LivewireServiceProvider::class,
             NotificationsServiceProvider::class,
             SupportServiceProvider::class,
             TablesServiceProvider::class,
             WidgetsServiceProvider::class,
+            SchemasServiceProvider::class,
             FilamentRecordSwitcherServiceProvider::class,
+            TestPanelProvider::class,
+            LivewireServiceProvider::class,
         ];
     }
 
-    public function getEnvironmentSetUp($app)
+    protected function defineDatabaseMigrations(): void
     {
-        config()->set('database.default', 'testing');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+    }
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_filament-record-switcher_table.php.stub';
-        $migration->up();
-        */
+    public function login(?User $as = null): User
+    {
+        /** @var User */
+        $user = $as ?? User::factory()->create();
+
+        actingAs($user);
+
+        return $user;
     }
 }
