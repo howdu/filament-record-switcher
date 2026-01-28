@@ -19,7 +19,7 @@ use function Filament\Support\generate_search_term_expression;
 /**
  * @mixin EditRecord
  */
-trait HasRecordSwitcher /** @phpstan-ignore trait.unused */
+trait HasRecordSwitcher
 {
     protected int $maxSelectOptions = 10;
 

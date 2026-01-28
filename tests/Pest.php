@@ -2,4 +2,4 @@
 
 use Howdu\FilamentRecordSwitcher\Tests\TestCase;
 
-uses(TestCase::class)->in(__DIR__);
+uses(TestCase::class)->in('src/Feature');
