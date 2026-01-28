@@ -10,6 +10,13 @@ Subtly convert the page title into a dropdown navigation that's displayed on cli
 
 It works similar to Filament's global search but only shows results for the current resource.
 
+#### Compatibility
+
+| Plugin Version                                                    | Filament Version | PHP Version |
+|-------------------------------------------------------------------|------------------|-------------|
+| [1.x](https://github.com/howdu/filament-record-switcher/tree/1.x) | 3.x              | \> 8.1      |
+| [2.x](https://github.com/howdu/filament-record-switcher/tree/2.x) | 4.x + 5.x        | \> 8.2      |
+
 ## Installation
 
 You can install the package via composer:
