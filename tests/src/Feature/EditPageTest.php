@@ -2,6 +2,7 @@
 
 use Howdu\FilamentRecordSwitcher\Tests\Fixtures\Filament\Resources\Post\Pages\EditPost;
 use Howdu\FilamentRecordSwitcher\Tests\Fixtures\Models\Post;
+
 use function Pest\Livewire\livewire;
 
 it('can render the edit page', function (): void {

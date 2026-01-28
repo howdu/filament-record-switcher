@@ -21,6 +21,7 @@ use Orchestra\Testbench\Attributes\WithMigration;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
 use Sinnbeck\DomAssertions\DomAssertionsServiceProvider;
+
 use function Pest\Laravel\actingAs;
 
 #[WithMigration]
@@ -50,7 +51,7 @@ class TestCase extends Orchestra
 
     protected function defineDatabaseMigrations(): void
     {
-        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
     }
 
     public function login(?User $as = null): User
